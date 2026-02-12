@@ -1,0 +1,78 @@
+<TaskerData sr="" dvi="1" tv="6.5.11">
+	<Profile sr="prof28" ve="2">
+		<cdate>1758894922552</cdate>
+		<clp>true</clp>
+		<edate>1764946407650</edate>
+		<flags>9</flags>
+		<id>28</id>
+		<mid0>29</mid0>
+		<nme>Battery Full</nme>
+		<Share sr="Share">
+			<b>false</b>
+			<d>Play a sound or say something out loud when your device is fully charged.
+&lt;br/&gt;&lt;br/&gt;
+This is the default sound: &lt;a href="https://joaoapps.com/Tasker/High%20tech%20-%20Sound%20effect.mp3"&gt;Sound File&lt;/a&gt;</d>
+			<g>Basics,Sound,Power</g>
+			<p>true</p>
+			<t></t>
+		</Share>
+		<State sr="con0" ve="2">
+			<code>140</code>
+			<Int sr="arg0" val="100"/>
+			<Int sr="arg1" val="100"/>
+		</State>
+	</Profile>
+	<Task sr="task29">
+		<cdate>1600850982375</cdate>
+		<edate>1764946403488</edate>
+		<id>29</id>
+		<nme>Charge Full</nme>
+		<pri>100</pri>
+		<showinnot>false</showinnot>
+		<Action sr="act0" ve="7">
+			<code>37</code>
+			<coll>false</coll>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%sound_file_full</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>342</code>
+			<Int sr="arg0" val="5"/>
+			<Str sr="arg1" ve="3">%sound_file_full</Str>
+			<Str sr="arg2" ve="3">%exists</Str>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>445</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">%sound_file_full</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="3"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>38</code>
+		</Action>
+		<ProfileVariable sr="pv0">
+			<clearout>true</clearout>
+			<exportval></exportval>
+			<immutable>false</immutable>
+			<pvci>false</pvci>
+			<pvd>Select the sound you want to play when your devices battery is full. Cancel to not pay a sound.</pvd>
+			<pvdn>Fully Charged Sound</pvdn>
+			<pvid>29</pvid>
+			<pvit>t</pvit>
+			<pvn>%sound_file_full</pvn>
+			<pvt>f</pvt>
+			<pvv>/storage/emulated/0/Download/sfx0.mp3</pvv>
+			<strout>false</strout>
+		</ProfileVariable>
+	</Task>
+</TaskerData>
